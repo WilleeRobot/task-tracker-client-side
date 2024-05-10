@@ -15,6 +15,7 @@ const SigninPage = () => {
   const handleSignin = async (e:any) => {
     e.preventDefault()
     const result = await signin({ input: state })
+    console.log(result)
 
     if (result.data.signin) {
       setToken(result.data.signin.token)
